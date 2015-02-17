@@ -12,8 +12,9 @@
                 <p>{{ question.author.username }}</p>
                 <p>{{ question.timestamp }}</p>
             {% endfor %}
-            {% bootstrap_pagination page_obj %}
-            <hr>
+            {% if is_paginated %}
+                {% bootstrap_pagination page_obj %}
+            {% endif %}
         {% else %}
             <p>Want to be the first author on our site?</p>
         {% endif %}
