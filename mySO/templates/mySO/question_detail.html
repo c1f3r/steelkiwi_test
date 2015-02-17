@@ -2,20 +2,29 @@
 {% load bootstrap3 %}
 {% block title %}Question detail{% endblock %}
 {% block content %}
-        <div class="col-md-offset-1 col-md-10">
-            <h1>{{ question.subject }}</h1>
-            <p>Asked by {{ question.author }} on {{ question.timestamp }}</p>
-            <p>{{ question.question | linebreaksbr }}</p>
-            <hr>
-            <h2>Comments: </h2>
-            {% for comment in comments %}
-                <h3>{{ comment.author }} at {{ comment.timestamp }}</h3>
-                <p>{{ comment.comment | linebreaksbr }}</p>
-            {% endfor %}
+    <div class="col-md-offset-1 col-md-10">
+        <h1>{{ question.subject }}</h1>
 
-            {% if request.user.is_authenticated %}
-                <h3>You can leave your comment on this question in form below:</h3>
-                <form method="post" action="{% url 'add_comment' question_id=question.id %}">
+        <p>Asked by {{ question.author }} on {{ question.timestamp }}</p>
+
+        <p>{{ question.question | linebreaksbr }}</p>
+        <hr>
+    <div class="col-md-offset-1 col-md-10">
+        <h2>Comments: </h2>
+        <table class="table">
+            {% for comment in comments %}
+                <tr><td>
+                    <p>{{ comment.author }} left at {{ comment.timestamp }}</p>
+                    <p>{{ comment.comment | linebreaksbr }}</p>
+                </td></tr>
+            {% endfor %}
+        </table>
+
+
+        {% if request.user.is_authenticated %}
+            <h3>You can leave your comment on this question in form below:</h3>
+            <form method="post"
+                  action="{% url 'add_comment' question_id=question.id %}">
                 {% csrf_token %}
                 {% bootstrap_form comment_form %}
 
@@ -24,11 +33,12 @@
                         {% bootstrap_icon "star" %} Submit
                     </button>
                 {% endbuttons %}
-                </form>
-            {% else %}
-                <h3>If you want to leave your comment please
-                    <a href="{% url 'auth_login' %}?next={{ request.path }}">
-                        Login</a></h3>
-            {% endif %}
+            </form>
+        {% else %}
+            <h3>If you want to leave your comment please
+                <a href="{% url 'auth_login' %}?next={{ request.path }}">
+                    Login</a></h3>
+        {% endif %}
+    </div>
     </div>
 {% endblock %}
