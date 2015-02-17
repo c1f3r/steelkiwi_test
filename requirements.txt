@@ -1,0 +1,14 @@
+Django==1.7.4
+PyJWT==0.4.1
+argparse==1.2.1
+django-bootstrap3==5.1.1
+django-contrib-comments==1.5
+django-registration-redux==1.1
+oauthlib==0.7.2
+python-openid==2.2.5
+python-social-auth==0.2.1
+pytz==2014.10
+requests==2.5.1
+requests-oauthlib==0.4.2
+six==1.5.2
+wsgiref==0.1.2
