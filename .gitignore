@@ -7,6 +7,12 @@ __pycache__/
 # C extensions
 *.so
 
+# sqlite3 DataBases
+*.sqlite3
+
+#Idea dir
+.idea
+
 # Distribution / packaging
 .Python
 env/
