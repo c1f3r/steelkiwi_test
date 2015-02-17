@@ -7,7 +7,8 @@ from mySO.views import QuestionListView, NewQuestionView, QuestionDetailView, \
 
 urlpatterns = patterns('',
                        url(r'^$', QuestionListView.as_view(), name='index'),
-                       url(r'^new_question/$', NewQuestionView.as_view(),
+                       url(r'^new_question/$',
+                           login_required(NewQuestionView.as_view()),
                            name='new_question'),
                        url(r'^question/(?P<pk>\d+)/$',
                            QuestionDetailView.as_view(),
