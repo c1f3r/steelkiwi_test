@@ -21,10 +21,10 @@
                         {% if request.user.is_active %}
                             <li><a href="{% url 'new_question' %}">New Question</a></li>
                         {% endif %}
-                        <li><a href="{% url 'auth_logout' %}?next={{ request.path }}">Logout</a></li>
+                        <li><a href="{% url 'auth_logout' %}?next={{ request.get_full_path }}">Logout</a></li>
                     {% else %}
                         <li><a href="{% url 'registration_register' %}">Register</a></li>
-                        <li><a href="{% url 'auth_login' %}?next={{ request.path }}">Login</a></li>
+                        <li><a href="{% url 'auth_login' %}?next={{ request.get_full_path }}">Login</a></li>
                     {% endif %}
                 </ul>
             </div>
