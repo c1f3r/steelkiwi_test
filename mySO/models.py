@@ -4,6 +4,8 @@ from django.db import models
 
 # from signals import notify_author_about_new_comment
 # Create your models here.
+from django.db.models.signals import post_save
+from mySO.signals import notify_author_about_new_comment
 
 
 class Question(models.Model):
@@ -22,4 +24,4 @@ class Comment(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(User)
 
-# comment_was_posted.connect(notify_author_about_new_comment)
+post_save.connect(notify_author_about_new_comment, sender=Comment)
