@@ -26,8 +26,6 @@
 
         <p><a href='{% url "social:begin" "facebook" %}?next={{ request.get_full_path | get_next }}'>Authorize via
             Facebook</a></p>
-        <p>{{ request.get_full_path | get_next }}</p>
-
     </div>
 {% endblock %}
 
