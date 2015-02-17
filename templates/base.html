@@ -8,6 +8,11 @@
     {% bootstrap_javascript jquery=1 %}
 </head>
 <body>
+<script type="text/javascript">
+    if (window.location.hash && window.location.hash == '#_=_') {
+        window.location.hash = '';
+    }
+</script>
 {% block navigation %}
     <nav class="navbar navbar-default">
         <div class="container-fluid">
