@@ -109,8 +109,8 @@ LOGIN_REDIRECT_URL = '/'
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'ciferstov@gmail.com'
-EMAIL_HOST_PASSWORD = 'my0wnst4ck0v3rfl0w'
+EMAIL_HOST_USER = 'yagopirovich@gmail.com'
+EMAIL_HOST_PASSWORD = 'ak3nat3r'
 EMAIL_PORT = 587
 
 AUTHENTICATION_BACKENDS = (
