@@ -12,3 +12,7 @@ class CommentAdmin(admin.TabularInline):
 @admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):
     inlines = [CommentAdmin]
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    pass
