@@ -1,5 +1,5 @@
 {% extends "registration/registration_base.html" %}
-{% load i18n bootstrap3 %}
+{% load i18n bootstrap3 my_so_filters %}
 
 {% block title %}{% trans "Log in" %}{% endblock %}
 
@@ -24,8 +24,9 @@
                 href="{% url 'registration_register' %}">{% trans "Register" %}</a>.
         </p>
 
-        <p><a href='{% url "social:begin" "facebook" %}'>Authorize via
+        <p><a href='{% url "social:begin" "facebook" %}?next={{ request.get_full_path | get_next }}'>Authorize via
             Facebook</a></p>
+        <p>{{ request.get_full_path | get_next }}</p>
 
     </div>
 {% endblock %}
