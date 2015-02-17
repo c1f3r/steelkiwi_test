@@ -5,12 +5,12 @@
         <div class="col-md-offset-1 col-md-10">
             <h1>{{ question.subject }}</h1>
             <p>Asked by {{ question.author }} on {{ question.timestamp }}</p>
-            <p>{{ question.question }}</p>
+            <p>{{ question.question | linebreaksbr }}</p>
             <hr>
             <h2>Comments: </h2>
             {% for comment in comments %}
                 <h3>{{ comment.author }} at {{ comment.timestamp }}</h3>
-                <p>{{ comment.comment }}</p>
+                <p>{{ comment.comment | linebreaksbr }}</p>
             {% endfor %}
 
             {% if request.user.is_authenticated %}
