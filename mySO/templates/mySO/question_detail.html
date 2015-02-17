@@ -11,7 +11,7 @@
         <hr>
     <div class="col-md-offset-1 col-md-10">
         <h2>Comments: </h2>
-        <table class="table">
+        <table class="table table-striped">
             {% for comment in comments %}
                 <tr><td>
                     <p>{{ comment.author }} left at {{ comment.timestamp }}</p>
