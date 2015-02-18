@@ -15,7 +15,7 @@ class Question(models.Model):
     author = models.ForeignKey(User)
 
     def __unicode__(self):
-        return self.subject
+        return u"{0} by {1}".format(self.subject, self.author)
 
     def get_absolute_url(self):
         return reverse('question_detail', args=[str(self.id)])

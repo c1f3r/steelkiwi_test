@@ -4,14 +4,23 @@
 {% block content %}
     <div class="col-md-offset-1 col-md-10">
         {% if questions %}
-            {% for question in questions %}
-                <h3>
-                    <a href="{% url 'question_detail' question.id %}"> {{ question.subject }}</a>
-                </h3>
-                <p>{{ question.question | truncatechars:100 }}</p>
-                <p>{{ question.author.username }}</p>
-                <p>{{ question.timestamp }}</p>
-            {% endfor %}
+            <table class="table table-striped">
+                {% for question in questions %}
+                    <tr>
+                        <td>
+                            <h3>
+                                <a href="{% url 'question_detail' question.id %}"> {{ question.subject }}</a>
+                            </h3>
+
+                            <p>{{ question.question | truncatechars:100 }}</p>
+
+                            <p>{{ question.author.username }}</p>
+
+                            <p>{{ question.timestamp }}</p>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
             {% if is_paginated %}
                 {% bootstrap_pagination page_obj %}
             {% endif %}
