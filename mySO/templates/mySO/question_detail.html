@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load bootstrap3 %}
-{% block title %}Question detail{% endblock %}
+{% block title %}{{ question.subject }}{% endblock %}
 {% block content %}
     <div class="col-md-offset-1 col-md-10">
         <h1>{{ question.subject }}</h1>
