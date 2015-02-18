@@ -1,10 +1,8 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.core.urlresolvers import reverse
-
-
-# Create your models here.
 from django.db.models.signals import post_save
+
 from mySO.signals import notify_author_about_new_comment
 
 

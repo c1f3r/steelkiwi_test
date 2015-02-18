@@ -4,7 +4,6 @@ from django.contrib import admin
 from mySO.models import Question, Comment
 
 
-
 class CommentAdmin(admin.TabularInline):
     model = Comment
 
@@ -12,6 +11,7 @@ class CommentAdmin(admin.TabularInline):
 @admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):
     inlines = [CommentAdmin]
+
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
