@@ -1,0 +1,56 @@
+[
+{
+    "fields": {
+        "username": "cifer",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2015-02-17T17:21:43.424Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$15000$zhJ7iQ0RCJcG$zdg4nYDHqUJq09uRN3SsT9iSeEf+jw96tx/1aYchiCc=",
+        "email": "cifer@yandex.ru",
+        "date_joined": "2015-02-17T07:35:49.466Z"
+    },
+    "model": "auth.user",
+    "pk": 1
+},
+{
+    "fields": {
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2015-02-18T08:47:59Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$15000$46p3zj1CBpIF$Rxy8zsMvjnqXS2qlpEPS/Z5oDT8EL0Vq9DRtGmwrCSM=",
+        "email": "admin@myso.com",
+        "date_joined": "2015-02-18T08:47:59Z"
+    },
+    "model": "auth.user",
+    "pk": 12
+},
+{
+    "fields": {
+        "username": "tester",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2015-02-18T08:49:00Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$15000$DXUJJF9mF7ty$l2fCV+dppEjGwermqXmKrWKeA9BTkt/chHpVmREla+s=",
+        "email": "tester@myso.com",
+        "date_joined": "2015-02-18T08:49:00Z"
+    },
+    "model": "auth.user",
+    "pk": 13
+}
+]
